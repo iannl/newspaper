@@ -3,7 +3,14 @@
 <a href="template/temp02">temp02</a>
 <input type="number" id="input" onchange="move()" placeholder="enter code number">
 <script>
-  function move() {
-     location.replace('r/'+document.getElementById('input').value+'/');
-  }
+function move() {
+	let input = document.getElementById('input')
+	if (input.value.length < 2 && isnum(input.value) == true) {
+		location.replace('r/' + document.getElementById('input').value + '/');
+	}
+}
+
+function isnum(str) {
+	return /^\d+$/.test(str);
+}
 </script>
