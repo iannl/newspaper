@@ -5,8 +5,11 @@
 <input type="number" id="input" onchange="move()" placeholder="enter code number">
 <script>
 function move() {
+	let pdf = document.getElementById('pdf').checked
 	let input = document.getElementById('input')
-	if (input.value.length < 2 && isnum(input.value) == true) {
+	if (input.value.length < 2 && isnum(input.value) == true && pdf == false) {
+		location.replace('r/' + document.getElementById('input').value + '/');
+	} else if(input.value.length < 2 && isnum(input.value) == true){
 		location.replace('r/' + document.getElementById('input').value + '/');
 	}
 }
