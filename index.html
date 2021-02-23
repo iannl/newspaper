@@ -9,10 +9,10 @@ function move() {
 	let pdf = document.getElementById('pdf').checked
 	let input = document.getElementById('input')
 	if (input.value.length < 2 && isnum(input.value) == true && pdf == false) {
-		location.replace('r/' + document.getElementById('input').value + '/');
+		window.open('r/' + document.getElementById('input').value + '/', '_blank');
 	} else if(input.value.length < 2 && isnum(input.value) == true){
 		document.getElementById('input').value++
-		location.replace('pdfs/' + document.getElementById('input').value + '/newspaper_temp.pdf', '_blank');
+		window.open('pdfs/' + document.getElementById('input').value + '/newspaper_temp.pdf', '_blank');
 	}
 }
 
