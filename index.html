@@ -10,7 +10,7 @@ function move() {
 	if (input.value.length < 2 && isnum(input.value) == true && pdf == false) {
 		location.replace('r/' + document.getElementById('input').value + '/');
 	} else if(input.value.length < 2 && isnum(input.value) == true){
-		location.replace('r/' + document.getElementById('input').value + '/');
+		location.replace('pdfs/' + Number(document.getElementById('input').value+1) + '/newspaper_temp.pdf');
 	}
 }
 
